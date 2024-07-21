@@ -118,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -151,3 +151,11 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=90),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
+
+OSCARBOT_BOT_MODEL = 'oscarbot.Bot'
+OSCARBOT_APPS = [
+    'oscar_bot'
+]
+
+TELEGRAM_URL = env('TOKEN_BOT')
+TELEGRAM_PARSE_MODE = 'HTML'
